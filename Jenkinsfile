@@ -53,7 +53,7 @@
             }
         }
 
-        stage('Deployment to AKS') {
+        stage('Deploying to AKS') {
             steps {
                 script {
                     kubernetesDeploy configs: 'deploymentservice.yml',  kubeconfigId: 'kube'
