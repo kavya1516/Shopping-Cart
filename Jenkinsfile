@@ -1,4 +1,4 @@
-pipeline {
+ pipeline {
     agent any
 
     environment {
@@ -53,7 +53,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deployment to Kubernetes') {
             steps {
                 script {
                     kubernetesDeploy configs: 'deploymentservice.yml',  kubeconfigId: 'kube'
